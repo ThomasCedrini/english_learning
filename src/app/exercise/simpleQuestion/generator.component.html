@@ -1,0 +1,16 @@
+<div class="form-group">
+    <label>Question</label>
+    <input  type="text"
+            class="form-control"
+            placeholder="Ask your question ..."
+            [(ngModel)]="question.text"
+            (blur)="onChange()" />
+</div>
+<div class="form-group">
+    <label>Answer</label>
+    <input  type="text"
+            class="form-control"
+            placeholder="Put the answer ..."
+            [(ngModel)]="question.answer"
+            (blur)="onChange()" />
+</div>

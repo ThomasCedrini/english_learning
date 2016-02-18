@@ -1,0 +1,20 @@
+<div *ngIf="question">
+    <div class="panel panel-default">
+        <div class="panel-heading">{{ question.text }}</div>
+        <div class="panel-body list-group">
+            <a      class="list-group-item"
+                    [class.list-group-item-success]="isSubmitted && answer.id == question.answer"
+                    [class.list-group-item-danger]="isSubmitted && answer.id != question.answer && answer.id == answered"
+
+                    (click)="choice(answer.id)"
+                    *ngFor="#answer of question.answers">
+                {{ answer.text }}
+                <span   class="glyphicon glyphicon-ok pull-right"
+                        *ngIf="isSubmitted && answer.id == question.answer"></span>
+
+                <span   class="glyphicon glyphicon-remove pull-right"
+                        *ngIf="isSubmitted && answer.id != question.answer && answer.id == answered"></span>
+            </a>
+        </div>
+    </div>
+</div>

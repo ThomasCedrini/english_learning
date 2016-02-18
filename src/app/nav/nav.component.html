@@ -1,0 +1,25 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+        <!-- Left side -->
+      <ul class="nav navbar-nav">
+        <li class="active"><a [routerLink]="['Homepage']"><span class=" glyphicon glyphicon-home"></span> Homepage</a></li>
+      </ul>
+
+        <!-- Right side -->
+        <span #user="user">
+          <ul   class="nav navbar-nav navbar-right"
+                *ngIf="!user.hasRole('user')">
+            <li><a [routerLink]="['UserOffline']"><span class="glyphicon glyphicon-user"></span> Log in</a></li>
+          </ul>
+          <ul   class="nav navbar-nav navbar-right"
+                *ngIf="user.hasRole('user')">
+            <li><a [routerLink]="['UserOnline']"><span class="glyphicon glyphicon-user"></span> {{ user.username }}</a></li>
+            <li><a (click)="user.logOut()"><span class="glyphicon glyphicon-off"></span> Log out</a></li>
+          </ul>
+        </span>
+
+    </div>
+  </div>
+</nav>

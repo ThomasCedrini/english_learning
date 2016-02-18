@@ -1,0 +1,30 @@
+<div class="form-group">
+    <label>Question</label>
+    <input  type="text"
+            class="form-control"
+            placeholder="Ask your question ..."
+            [(ngModel)]="qcm.text"
+            (blur)="blur()" />
+</div>
+
+<ul class="list-group">
+    <li class="list-group-item"
+        *ngFor="#answer of qcm.answers">
+                <input  type="radio"
+                        name="answer_{{qcm.text}}"
+                        (click)="select(answer.id)"
+                        [checked]="qcm.answer == answer.id" />
+                {{ answer.text }}
+                <span   class="glyphicon glyphicon-remove pull-right"
+                        (click)="removeItem(answer.id)"></span>
+    </li>
+    <li class="list-group-item">
+        <input  type="text"
+                class="form-control"
+                placeholder="Item ..."
+                [(ngModel)]="newItem" />
+        <button type="button"
+                class="btn btn-primary"
+                (click)="addItem()">Add item</button>
+    </li>
+</ul>

@@ -1,0 +1,26 @@
+<div *ngIf="media">
+    <div class="panel panel-default">
+        <div class="panel-heading">{{ media.title }}</div>
+        <div class="panel-body">
+
+            <p *ngIf="media.text"
+                style="font: 18px Georgia,Serif; color:#333; white-space: pre-wrap; line-height:23pt;">
+                    {{ media.text }}</p>
+            <img    *ngIf="media.picture"
+                    src="{{ media.picture }}"
+                    class="img-responsive"
+                    />
+            <div    *ngIf="media.video"
+                    class="embed-responsive embed-responsive-16by9" >
+                        <iframe *ngIf="media.video"
+                                class="embed-responsive-item"
+                                src="{{ media.video }}"></iframe>
+            </div>
+            <blockquote *ngIf="media.source">
+                <footer>
+                    Source : <a href="{{ media.source }}">{{ media.source }}</a>
+                </footer>
+            </blockquote>
+        </div>
+    </div>
+</div>

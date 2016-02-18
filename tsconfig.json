@@ -1,0 +1,58 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "noEmitHelpers": false,
+    "sourceMap": true
+  },
+  "files": [
+    "./src/app/app.component.ts",
+    "./src/app/database/exercise.service.ts",
+    "./src/app/database/repository.service.ts",
+    "./src/app/database/user.service.ts",
+    "./src/app/exercise/exercise.component.ts",
+    "./src/app/exercise/exercise.ts",
+    "./src/app/exercise/gapFill/gap.component.ts",
+    "./src/app/exercise/gapFill/gap.ts",
+    "./src/app/exercise/gapFill/gapFill.ts",
+    "./src/app/exercise/gapFill/question.component.ts",
+    "./src/app/exercise/object.creator.service.ts",
+    "./src/app/exercise/QCM/answer.ts",
+    "./src/app/exercise/QCM/generator.component.ts",
+    "./src/app/exercise/QCM/QCM.ts",
+    "./src/app/exercise/QCM/question.component.ts",
+    "./src/app/exercise/question.ts",
+    "./src/app/exercise/simpleQuestion/generator.component.ts",
+    "./src/app/exercise/simpleQuestion/question.component.ts",
+    "./src/app/exercise/simpleQuestion/simpleQuestion.ts",
+    "./src/app/firebase/config.ts",
+    "./src/app/firebase/firebase.d.ts",
+    "./src/app/firebase/firebaseevent.pipe.ts",
+    "./src/app/generator/generator.component.ts",
+    "./src/app/generator/newQuestion.component.ts",
+    "./src/app/homepage/homepage.component.ts",
+    "./src/app/nav/nav.component.ts",
+    "./src/app/user/auth.service.ts",
+    "./src/app/user/exerciseDone.ts",
+    "./src/app/user/offline.component.ts",
+    "./src/app/user/online.component.ts",
+    "./src/app/user/user.ts",
+    "./src/custom_typings.d.ts",
+    "./src/main.ts",
+    "./src/vendor.ts"
+  ],
+  "filesGlob": [
+    "./src/**/*.ts",
+    "./test/**/*.ts",
+    "!./node_modules/**/*.ts",
+    "typings/main.d.ts"
+  ],
+  "compileOnSave": false,
+  "buildOnSave": false,
+  "atom": {
+    "rewriteTsconfig": false
+  }
+}

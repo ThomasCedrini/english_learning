@@ -1,0 +1,38 @@
+<h1>Choose the exercise you want to do !</h1>
+<div class="row" #user="user">
+    <ul class="list-group">
+        <li  class="list-group-item"
+            *ngFor="#exercise of exercises">
+            <a [routerLink]="['Exercise', {id:exercise.id}]">{{exercise.title}}</a>
+            <span class="label label-success">{{ exercise.type.text }}</span>
+            <span *ngIf="user.isExerciseDone(exercise.id)">
+                {{ user.getScore(exercise.id) }} / {{ exercise.maxScore() }}
+            </span>
+            <span class="pull-right">
+                <button class="btn btn-default"
+                        [routerLink]="['Editor', {id:exercise.id}]"
+                        *ngIf="user.hasRole('admin')">
+                        Edit
+                </button>
+                <button  class="btn btn-danger"
+                        (click)="deleteOne(exercise)"
+                        *ngIf="user.hasRole('admin')">
+                            Remove
+                </button>
+            </span>
+        </li>
+    </ul>
+
+    <div class="row" *ngIf="user.hasRole('admin')">
+        <button class="btn btn-primary"
+                [routerLink]="['Generator']">Generate an exercise</button>
+    </div>
+</div>
+
+<!--<span *ngIf="exercise.score != undefined" class="pull-right">
+<span class="label"
+[class.label-success]="(exercise.score/exercise.questions.length) >= 0.7"
+[class.label-warning]="(exercise.score/exercise.questions.length) < 0.7 && (exercise.score/exercise.questions.length) >= 0.4"
+[class.label-danger]="(exercise.score/exercise.questions.length) < 0.4"
+>{{ exercise.score }} / {{ exercise.questions.length }}</span>
+</span>-->

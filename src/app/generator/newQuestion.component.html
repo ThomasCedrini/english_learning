@@ -1,0 +1,28 @@
+<div class="row col-sm-10 col-sm-offset-1">
+    <span   class="glyphicon glyphicon-remove pull-right"
+            (click)="ciao()"></span>
+    <div *ngIf="!type">
+        <button class="btn btn-primary col-sm-4"
+                (click)="type='QCM'">QCM</button>
+        <button class="btn btn-primary col-sm-4 col-sm-offset-1"
+                (click)="type='question'">Simple question</button>
+        <button class="btn btn-primary col-sm-4 col-sm-offset-1"
+                (click)="type='media'">Media</button>
+    </div>
+    <div *ngIf="type">
+        <qcm-generator  *ngIf="type=='QCM'"
+                        [number]="number"
+                        [qcm]="question"
+                        (questionChange)="getData($event)"></qcm-generator>
+        <question-generator *ngIf="type=='question'"
+                            [number]="number"
+                            [simple-question]="question"
+                            (questionChange)="getData($event)"></question-generator>
+        <media-generator    *ngIf="type=='media'"
+                            [number]="number"
+                            [media]="question"
+                            (questionChange)="getData($event)"></media-generator>
+        <button class="btn btn-warning"
+                (click)="type=null">Cancel</button>
+    </div>
+</div>
