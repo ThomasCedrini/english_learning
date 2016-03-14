@@ -14,10 +14,11 @@ import {SimpleQuestion} from '../exercise/simpleQuestion/simpleQuestion';
 import {GapFill} from '../exercise/gapFill/gapFill';
 import {Media} from '../exercise/media/media';
 
+import {BASE_URL} from '../../config.ts';
 
 @Component({
     selector: 'new-question',
-    templateUrl : 'src/app/generator/newQuestion.component.html',
+    templateUrl : BASE_URL+'generator/newQuestion.component.html',
     directives: [QCMGenerator, QuestionGenerator, MediaGenerator]
 })
 export class NewQuestionComponent implements OnInit {

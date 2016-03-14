@@ -2,9 +2,11 @@ import {Component, Input, Output, EventEmitter} from 'angular2/core';
 
 import {QCM} from './QCM';
 
+import {BASE_URL} from '../../../config.ts';
+
 @Component({
     selector: 'QCM',
-    templateUrl : 'src/app/exercise/QCM/question.component.html'
+    templateUrl : BASE_URL+'exercise/QCM/question.component.html'
 })
 export class QuestionComponent {
     @Input('question') question: QCM;

@@ -5,12 +5,14 @@ import {RouteParams, ROUTER_DIRECTIVES} from 'angular2/router';
 
 import {NewQuestionComponent} from './newQuestion.component';
 import {Exercise} from '../exercise/exercise';
-import {RepositoryService} from '../database/repository.service';
+import {ExerciseService} from '../database/exercise.service';
 import {ObjectCreatorService} from '../exercise/object.creator.service';
+
+import {BASE_URL} from '../../config.ts';
 
 @Component({
     selector: 'generator',
-    templateUrl : 'src/app/generator/generator.component.html',
+    templateUrl : BASE_URL+'generator/generator.component.html',
     directives: [NewQuestionComponent],
     providers: [ObjectCreatorService]
 })
@@ -23,7 +25,7 @@ export class GeneratorComponent implements OnInit {
 
     constructor(private _dcl: DynamicComponentLoader,
                 private _elementRef: ElementRef,
-                private _repo: RepositoryService,
+                private _repo: ExerciseService,
                 private _objectCreator: ObjectCreatorService) {
     }
 

@@ -49,6 +49,8 @@ export class ObjectCreatorService {
                 newExercise.title = exercise.title;
             if (exercise.type)
                 newExercise.type = exercise.type;
+            if (exercise.orders)
+                newExercise.orders = exercise.orders;
         }
         return newExercise;
     }

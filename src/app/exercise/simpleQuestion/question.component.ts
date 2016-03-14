@@ -2,9 +2,11 @@ import {Component, Input, Output, EventEmitter} from 'angular2/core';
 
 import {SimpleQuestion} from './simpleQuestion';
 
+import {BASE_URL} from '../../../config.ts';
+
 @Component({
     selector: 'simple-question',
-    templateUrl : 'src/app/exercise/simpleQuestion/question.component.html'
+    templateUrl : BASE_URL+'exercise/simpleQuestion/question.component.html'
 })
 export class QuestionComponent {
     @Input('question') question: SimpleQuestion;

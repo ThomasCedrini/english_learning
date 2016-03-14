@@ -4,9 +4,11 @@ import {Component, Input, Output, EventEmitter,
 import {GapFill} from './gapFill';
 import {GapComponent} from './gap.component';
 
+import {BASE_URL} from '../../../config.ts';
+
 @Component({
     selector: 'gap-fill',
-    templateUrl : 'src/app/exercise/gapFill/question.component.html'
+    templateUrl : BASE_URL+'exercise/gapFill/question.component.html'
 })
 export class QuestionComponent {
     @Input('question') question: GapFill;

@@ -12,9 +12,11 @@ import {ExerciseService} from '../database/exercise.service';
 import {UserTemplateProvider} from '../user/template.provider.directive';
 import {UserProvider} from '../user/user.provider.service';
 
+import {BASE_URL} from '../../config.ts';
+
 @Component({
     selector: 'homepage',
-    templateUrl : 'src/app/homepage/homepage.component.html',
+    templateUrl : BASE_URL+'homepage/homepage.component.html',
     directives: [ROUTER_DIRECTIVES, UserTemplateProvider]
 })
 export class HomepageComponent implements OnInit {

@@ -3,9 +3,11 @@ import {Component, OnInit, Input, Output, EventEmitter} from 'angular2/core';
 import {SimpleQuestion} from './simpleQuestion';
 import {ObjectCreatorService} from '../object.creator.service';
 
+import {BASE_URL} from '../../../config.ts';
+
 @Component({
     selector: 'question-generator',
-    templateUrl: 'src/app/exercise/simpleQuestion/generator.component.html',
+    templateUrl: BASE_URL+'exercise/simpleQuestion/generator.component.html',
     providers: [ObjectCreatorService]
 })
 export class GeneratorComponent implements OnInit {

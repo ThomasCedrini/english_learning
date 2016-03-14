@@ -8,12 +8,14 @@ export class Exercise {
     public questions: (QCM|SimpleQuestion|GapFill)[];
     public title: string;
     public type: Type;
+    public orders: string;
 
     constructor() {
         this.id = null;
         this.questions = [];
         this.title = null;
         this.type = new Type();
+        this.orders = null;
     }
 
     maxScore(): number {

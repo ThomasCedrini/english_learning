@@ -4,6 +4,9 @@
     </div>
     <div class="row">
         <div class="col-sm-9">
+            <blockquote *ngIf="exercise.orders">
+                {{ exercise.orders }}
+            </blockquote>
             <div *ngFor="#question of exercise.questions">
                 <QCM    *ngIf="question.type=='QCM'"
                         [question]="question"

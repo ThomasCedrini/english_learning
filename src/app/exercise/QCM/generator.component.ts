@@ -4,9 +4,11 @@ import {QCM} from './qcm';
 import {Answer} from './answer';
 import {ObjectCreatorService} from '../object.creator.service';
 
+import {BASE_URL} from '../../../config.ts';
+
 @Component({
     selector: 'qcm-generator',
-    templateUrl : 'src/app/exercise/QCM/generator.component.html',
+    templateUrl : BASE_URL+'exercise/QCM/generator.component.html',
     providers: [ObjectCreatorService]
 })
 export class GeneratorComponent implements OnInit {

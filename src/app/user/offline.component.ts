@@ -2,10 +2,11 @@ import {Component, OnInit} from 'angular2/core';
 import {ROUTER_DIRECTIVES, Router} from 'angular2/router';
 
 import {UserProvider, ROLES} from './user.provider.service';
+import {BASE_URL} from '../../config.ts';
 
 @Component({
     selector: 'offline',
-    templateUrl: 'src/app/user/offline.component.html',
+    templateUrl: BASE_URL+'user/offline.component.html',
     directives: [ROUTER_DIRECTIVES]
 })
 export class OfflineComponent implements OnInit {

@@ -11,9 +11,11 @@ import {QuestionComponent as Media} from './media/question.component';
 
 import {UserProvider, User} from '../user/user.provider.service';
 
+import {BASE_URL} from '../../config.ts';
+
 @Component({
     selector: 'exercise',
-    templateUrl : 'src/app/exercise/exercise.component.html',
+    templateUrl : BASE_URL+'exercise/exercise.component.html',
     directives: [ROUTER_DIRECTIVES, QCM, SimpleQuestion, GapFill, Media]
 })
 export class ExerciseComponent implements OnInit {

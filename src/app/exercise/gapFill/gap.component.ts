@@ -2,9 +2,11 @@ import {Component, Input, Output, EventEmitter} from 'angular2/core';
 
 import {GapFill} from './gapFill';
 
+import {BASE_URL} from '../../../config.ts';
+
 @Component({
     selector: 'gap',
-    templateUrl : 'src/app/exercise/gapFill/gap.component.html'
+    templateUrl : BASE_URL+'exercise/gapFill/gap.component.html'
 })
 export class GapComponent {
     @Input("number") number:number;

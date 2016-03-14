@@ -3,9 +3,11 @@ import {Component, OnInit, Input, Output, EventEmitter} from 'angular2/core';
 import {Media} from './media';
 import {ObjectCreatorService} from '../object.creator.service';
 
+import {BASE_URL} from '../../../config.ts';
+
 @Component({
     selector: 'media-generator',
-    templateUrl: 'src/app/exercise/media/generator.component.html',
+    templateUrl: BASE_URL+'exercise/media/generator.component.html',
     providers: [ObjectCreatorService]
 })
 export class GeneratorComponent implements OnInit {

@@ -12,9 +12,11 @@ import {GeneratorComponent} from './generator/generator.component';
 
 import {ROLES} from './user/user.provider.service';
 
+import {BASE_URL} from '../config.ts';
+
 @Component({
     selector: 'app',
-    templateUrl: 'src/app/app.component.html',
+    templateUrl: BASE_URL+'app.component.html',
     directives: [RouterOutlet, NavComponent]
 })
 @RouteConfig([

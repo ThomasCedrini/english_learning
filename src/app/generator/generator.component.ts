@@ -14,9 +14,11 @@ import {SimpleQuestion} from '../exercise/simpleQuestion/simpleQuestion';
 import {GapFill} from '../exercise/gapFill/gapFill';
 import {Media} from '../exercise/media/media';
 
+import {BASE_URL} from '../../config.ts';
+
 @Component({
     selector: 'generator',
-    templateUrl : 'src/app/generator/generator.component.html',
+    templateUrl : BASE_URL+'generator/generator.component.html',
     directives: [NewQuestionComponent],
     providers: [ObjectCreatorService]
 })
